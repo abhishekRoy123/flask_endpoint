@@ -3,12 +3,6 @@ services:
     name: flask-api
     env: python
     plan: free
-    region: oregon  # or frankfurt if you prefer EU
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    region: oregon
+    buildCommand: pip install -r requirements.txt
     autoDeploy: true
-    envVars:
-      - key: FLASK_ENV
-        value: production
-      - key: PORT
-        value: 5000
